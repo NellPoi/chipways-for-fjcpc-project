@@ -1,5 +1,15 @@
 <template>
   <div id="viewDiv"></div>
+  <div class="logo">
+    <img src="https://www.10101.top/LuYiAn-Map/static/logo.png" alt="logo">
+    <div class="logo_info">
+      <span>Project Name</span>
+      <br>
+      <span>福建船政交通职业学院</span>
+      <br>
+      <a style="text-decoration: none" href="https://beian.miit.gov.cn/">闽ICP备20002277号-3</a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -144,7 +154,23 @@ export default {
       }
     });
   },
-  methods: {}
+  methods: {
+    /**
+     * 倒计时
+     */
+    countDown() {
+      // 将setInterval()方法赋值给前面定义的timer计时器对象，等用clearInterval()方法时方便清空这个计时器对象
+      this.timer = setInterval(() => {
+        // 替换文本，用es6里面的``这个来创建字符串模板，让秒实时改变
+        // this.sendBtnText = `(${this.counter}秒)后重新发送`
+        this.counter--
+        if (this.counter < 0) {
+          // 当计时小于零时，取消该计时器
+          clearInterval(this.timer)
+        }
+      }, 2000)
+    }
+  }
 }
 </script>
 

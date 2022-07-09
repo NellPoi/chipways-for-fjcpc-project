@@ -21,3 +21,36 @@ body,
     height: 100%;
     width: 100%;
 }
+
+.logo {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
+    margin: 1rem;
+    pointer-events: auto;
+    box-sizing: border-box;
+    color: #323232;
+    font-size: 15px;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .5s all;
+}
+
+.logo_info {
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+.logo img {
+    margin: .5rem;
+    max-height: 50px;
+    max-width: 50px;
+}
